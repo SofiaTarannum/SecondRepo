@@ -1,0 +1,112 @@
+
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+    
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Welly - Hospital Bootstrap Admin Dashboard</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap' %}" rel="stylesheet">
+    <script type="text/javascript" lang="javascript" src="{% static 'js/forgot2.js' %}"></script>
+</head>
+
+<body class="h-100">
+    <div class="authincation h-100">
+        <div class="container h-100">
+            <div class="row justify-content-center h-100 align-items-center">
+                <div class="col-md-6">
+                    <div class="authincation-content">
+                        <div class="row no-gutters">
+                            <div class="col-xl-12">
+                                <div class="auth-form">
+									<div class="text-center mb-3">
+										<a href="{% url 'admin_index' %}"><img src="{% static 'images/logo-full.png' %}" alt=""></a>
+									</div>
+                                    <form id="f1" name="forgot2" action="" method="POST">
+                                        
+                                    {% csrf_token %}
+                                    <h4 class="text-center mb-4 text-white">Password Confirmation</h4>
+                                   
+                                        <div class="form-group">
+                                            <label class="mb-1 text-white"><strong>Email</strong></label>
+                                            <input  name="email" id="email" type="email" class="form-control" placeholder="enter your mail" >
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="mb-1 text-white"><strong>New Password</strong></label>
+                                            <input  name="password" id="password" type="password" class="form-control" placeholder="enter your new password" >
+                                        </div>
+										<div class="form-group">
+                                            <label class="mb-1 text-white"><strong>Confirm Password</strong></label>
+                                            <input  name="password1" id="password1" type="password" class="form-control" placeholder="Confirm your  password" >
+                                        </div>
+                                        <div class="form-row d-flex justify-content-between mt-4 mb-2">
+                                            <div class="form-group">
+                                               
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="text-center">
+                                            <button type="submit" class="btn bg-white text-primary btn-block" onclick="validateforgot2()">Submit</button>
+                                            
+                                        </div>
+                                    </form>
+                                  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+	<!--
+
+				<form id="f1" name="f1" action="" method="POST">
+					{% csrf_token %}
+					
+						Password Confirmation
+					
+
+					
+						<input type="text" name="email" placeholder="Name">
+						
+					
+						<input type="password" name="password" placeholder="New Password">
+						
+
+                    
+						<input type="password" name="password" placeholder="Confirm Password">
+						
+					
+					
+						<button type="submit">Confirm</button>
+					
+						<a href="{% url 'page_login' %}">
+							Login
+						</a>
+					
+				</form>
+			
+
+	-->
+
+
+</body>
+</html>

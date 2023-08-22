@@ -1,0 +1,21 @@
+{% load static %}
+<html>
+<head>
+<title>Crud Operations</title>
+</head>
+<body>
+<form id="f1" action="" method="POST">   
+    {% csrf_token %}
+    <table border="2">
+        {%for x in files%}
+         <tr>
+             <td>
+                <a href="/media/{{x.file}}" download>{{x.file}}</a>
+
+            </td>
+        </tr>
+         {%endfor%}
+     </table>
+</form>
+</body>
+</html>

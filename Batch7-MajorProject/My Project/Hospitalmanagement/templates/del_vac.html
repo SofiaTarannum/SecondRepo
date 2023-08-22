@@ -1,0 +1,251 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Vaccines</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <p>hi</p>
+                {{status}}
+            </td>
+        </tr>
+    </table>
+    </form>
+    
+</body>
+</html>
+-->
+
+
+
+
+
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Delete Vaccine</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+	<link href="{% static 'vendor/jqvmap/css/jqvmap.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'vendor/chartist/css/chartist.min.css' %}">
+    <link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <a href="{% url 'admin_index' %}" class="brand-logo">
+               <img class="logo-abbr" src="{% static 'images/logo.png' %}" alt="">
+                <img class="logo-compact" src="{% static 'images/logo-text.png' %}" alt="">
+                <!--
+				<img class="brand-title" src="{% static 'images/logo-text.png' %}" alt="">
+				
+				<b style="font-size:20px; color: #cc2e2e">Rammohan children's Hospital</b>
+            -->
+			</a>
+
+            <div class="nav-control">
+                <div class="hamburger">
+                    <span class="line"></span><span class="line"></span><span class="line"></span>
+					
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+		
+		<br>
+		
+	<center>
+		<b style="font-size:50px; color:#007A64">Rammohan Children's Hospital </b>
+	</center>
+	<!--**********************************
+            Sidebar start
+        ***********************************-->
+
+
+
+        
+        
+        <div class="deznav">
+            <div class="deznav-scroll">
+				<ul class="metismenu" id="menu">
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-networking"></i>
+							<span class="nav-text">Dashboard</span>
+						</a>
+                        <ul aria-expanded="false">
+							<li><a href="{% url 'admin_index' %}">Dashboard</a></li>
+						</ul>
+                    </li>
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+							<i class="flaticon-381-television"></i>
+							<span class="nav-text">Vaccines</span>
+						</a>
+                        
+                            <!--<li><a href="./app-profile.html">Profile</a></li>-->
+                            
+                                <ul aria-expanded="false">
+									
+                                    <li><a href="{% url 'managevac' %}">Manage Vaccines</a></li>
+                                   
+                                </ul>
+                            </li>
+                            
+							<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+								<i class="flaticon-381-television"></i>
+								<span class="nav-text">In-Patient</span>
+							</a>
+							
+								<!--<li><a href="./app-profile.html">Profile</a></li>-->
+								
+									<ul aria-expanded="false">
+										
+										<li><a href="{% url 'managestatus' %}">Edit Patient Status</a></li>
+									   
+									</ul>
+								</li>
+
+							<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+								<i class="flaticon-381-television"></i>
+								<span class="nav-text">Patient Reports</span>
+							</a>
+							
+								<!--<li><a href="./app-profile.html">Profile</a></li>-->
+								
+									<ul aria-expanded="false">
+										
+										<li><a href="{% url 'uploadreportfile' %}">Upload Report(File)</a></li>
+									   
+									</ul>
+
+									<ul aria-expanded="false">
+										
+										<li><a href="{% url 'sendreports' %}">send Reports</a></li>
+									   
+									</ul>
+								</li>
+
+								<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+									<i class="flaticon-381-television"></i>
+									<span class="nav-text">Patient Bills</span>
+								</a>
+								
+									<!--<li><a href="./app-profile.html">Profile</a></li>-->
+									
+										<ul aria-expanded="false">
+											
+											<li><a href="{% url 'uploadfile' %}">Upload Bill(File)</a></li>
+										   
+										</ul>
+	
+										<ul aria-expanded="false">
+											
+											<li><a href="{% url 'sendbills' %}">send Bills</a></li>
+										   
+										</ul>
+									</li>
+
+										
+											
+		
+											
+											
+
+										<li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+											<i class="flaticon-381-television"></i>
+											<span class="nav-text">Fetch Details</span>
+										</a>
+										<ul aria-expanded="false">
+											<li><a href="{% url 'inpatient' %}">In-Patient Details</a></li>
+											<li><a href="{% url 'outpatient' %}">Out-Patient Details</a></li>
+											<li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Appointment Details</a>
+												<ul aria-expanded="false">
+													<li><a href="{% url 'date1' %}">Given Date</a></li>
+													<li><a href="{% url 'todate' %}">From to date</a></li>
+													
+												</ul>
+											</li>
+											
+
+
+
+                </ul>
+
+				<div class="copyright">
+					<p><strong>Rammohan children Hospital Admin Dashboard</strong> © 2020 All Rights Reserved</p>
+					<p>Made with ♥ by DexignZone</p>
+				</div>
+			</div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+                     <center>
+                      <b style="font-size:25px; color:forestgreen" >   Vaccine deleted successfully 
+                    <br>
+                to go back <a href="{%url 'managevac' %}"><u>CLICK HERE</a></u></b>
+                     </center>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    
+                                
+
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{% static 'js/global.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/deznav-init.js' %}"></script>
+    </form>
+</body>
+
+</html>

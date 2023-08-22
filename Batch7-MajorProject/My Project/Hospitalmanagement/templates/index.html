@@ -1,0 +1,538 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+     <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
+     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" type="text/css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+
+     
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>Welcome to Rammohan Children's Hospital </p>
+                    </div>
+                         
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i>9849861242</span>
+                         <span class="date-icon"><i class="fa fa-calendar-plus-o"></i> 11:00 AM - 07:00 PM (Mon-sun)</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">rammohan@gmail.com</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                    <!-- lOGO TEXT HERE -->
+                    <a href="{% url 'index' %}" class="navbar-brand"><b style="font-size:30px; color: #cc2e2e">Rammohan Children's Hospital</b></a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a href="#appointment" class="smoothScroll">Our Doctors</a></li>
+                         <li><a href="#news" class="smoothScroll">Our Facilities</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                         <li class="appointment-btn"><a href="{% url 'page_login' %}">Admin Dashboard</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+    <!-- HOME -->
+    <section id="home" class="slider" data-stellar-background-ratio="0.5">
+     <div class="container">
+          <div class="row">
+
+                    <div class="owl-carousel owl-theme">
+                         
+                         
+                    
+                         <div class="item item-first">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>Let's make your life happier</h3>
+                                        <h1>Healthy Living</h1>
+                                        <a href="#registration" class="section-btn btn btn-default smoothScroll">Make an appointment</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-second">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>Blood Donation</h3>
+                                        <h1>Be The reason For Someone's Heartbeat</h1>
+                                        <a href="{% url 'blood' %}" class="section-btn btn btn-default btn-gray smoothScroll">Donate blood</a>
+                                   </div>
+                              </div>
+                         </div>
+
+                         <div class="item item-third">
+                              <div class="caption">
+                                   <div class="col-md-offset-1 col-md-10">
+                                        <h3>Opportunity</h3>
+                                        <h1>Don't Limit Yourself</h1>
+                                        <a href="{% url 'job' %}" class="section-btn btn btn-default btn-blue smoothScroll">Apply for a job</a>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               
+          </div>
+     </div>
+</section>
+
+
+     <!-- ABOUT -->
+     <section id="about">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.6s">Welcome to Rammohan Childrens Hospital</h2>
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <p> Our health care institution provides patient treatment with specialized health science , auxiliary healthcare staff and medical equipment.</p>
+                                   <p>Our hospital typically is the major health care facility in its region, with many beds for intensive care and additional beds for patients who need long-term care.</p>
+                                   <p>We like to think that we are an extraordinary practice that is all about you - your potential, your comfort, your health, and your individuality. You are important to us and we strive to help you in every and any way that we can.</p>
+                              </div>
+                              <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                                   <img src="{% static 'images/doc.png' %}" class="img-responsive" alt="">
+                                   <figcaption>
+                                        <h3>Dr. G Ram Mohan</h3>
+                                        <p>Children Specialist</p>
+                                   </figcaption>
+                              </figure>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+
+
+     <!-- TEAM -->
+     <!--
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <div class="about-info">
+                              <h2 class="wow fadeInUp" data-wow-delay="0.1s">Our Doctor</h2>
+                         </div>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="{% static 'images/team-image1.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Nate Baston</h3>
+                                        <p>General Principal</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 9885000651</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">Rammohan@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="{% static 'images/team-image2.jpg' %}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Jason Stewart</h3>
+                                        <p>Pregnancy</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-070-0170</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">pregnancy@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                             <li><a href="#" class="fa fa-flickr"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="team-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <img src="{% static 'images/team-image3.jpg'%}" class="img-responsive" alt="">
+
+                                   <div class="team-info">
+                                        <h3>Miasha Nakahara</h3>
+                                        <p>Cardiology</p>
+                                        <div class="team-contact-info">
+                                             <p><i class="fa fa-phone"></i> 010-040-0140</p>
+                                             <p><i class="fa fa-envelope-o"></i> <a href="#">cardio@company.com</a></p>
+                                        </div>
+                                        <ul class="social-icon">
+                                             <li><a href="#" class="fa fa-twitter"></a></li>
+                                             <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                        </ul>
+                                   </div>
+
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </section>
+-->
+<section id="appointment" data-stellar-background-ratio="3">
+     <div class="container">
+          <div class="row">
+
+               <div class="col-md-6 col-sm-6">
+                    <img src="{% static 'images/doc1.jpg' %}" class="img-responsive" alt="">
+               </div>
+
+               <div class="col-md-6 col-sm-6">
+                   
+                    
+                    <script type="text/javascript" lang="javascript" src="{% static 'js/registration.js' %}"></script>
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                              <h2>Our Doctor</h2>
+                         </div>
+                       <p> Our hospital and doctor are very well trained when it comes to managing the physical, behavioural and mental care for children from birth until age 18.</p>
+                       <br>
+                       <br>
+                       <p>Our doctor, Dr.Rammohan specializes in diagnosing and treating a broad range of childhood illness, from minor health problems to serious diseases.</p> 
+                       <br>
+                       <br>
+                       <figure class="profile wow fadeInUp" data-wow-delay="1s">
+                         <img src="{% static 'images/doc.png' %}" class="img-responsive" alt="">
+                         <figcaption>
+                              <h3>Dr. G Ram Mohan</h3>
+                              <p>Children Specialist
+                              <br>
+                              MBBS, MD(paediatrics)
+                              <br>
+                              5 years experience
+                         </p>
+                         </figcaption>
+                    </figure>
+               </div>
+
+          </div>
+     </div>
+     </section>
+
+     <!-- NEWS -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <!-- SECTION TITLE -->
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2>Our Facilities</h2>
+                         </div>
+                    </div>
+               
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              
+                                   <img src="{% static 'images/incubator.jpg' %}" class="img-responsive" alt="">
+                              
+                              <div class="news-info">
+                                   
+                                   <h5>Incubators for Babies</h5>
+                                   
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                    <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                    <img src="{% static 'images/hospitalbed1.jpg' %}" class="img-responsive" alt="">
+                              
+                                    <div class="news-info">
+                                         
+                                         <h5>Hospital Beds</h5>
+                                         
+                                          </div>
+                                          </div>
+                                          </div>
+                                          <div class="col-md-4 col-sm-6">
+                                          <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                             <img src="{% static 'images/lab.jpg' %}" class="img-responsive" alt="">
+                                       
+                                             <div class="news-info">
+                                                  
+                                                  <h5>Hospital Lab</h5>
+                                                  
+                                                   </div>
+                                                   </div>
+                                                  </div>
+</div>
+                                                  <div class="col-md-4 col-sm-6">
+                                                       <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                                       <img src="{% static 'images/standardequip.jpg' %}" class="img-responsive" alt="">
+                                                 
+                                                       <div class="news-info">
+                                                            
+                                                            <h5>Standard Equipments</h5>
+                                                            
+                                                             </div>
+                                                             </div>
+                                                             </div>
+
+                                                             <div class="col-md-4 col-sm-6">
+                                                                 <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                                                 <img src="{% static 'images/vac.png' %}" class="img-responsive" alt="">
+                                                           
+                                                                 <div class="news-info">
+                                                                      
+                                                                      <h5>Vaccines</h5>
+                                                                      
+                                                                       </div>
+                                                                       </div>
+                                                                       </div>
+
+                                                             <div class="col-md-4 col-sm-6">
+                                                                 <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                                                                 <img src="{% static 'images/medicalstore.jpg' %}" class="img-responsive" alt="">
+                                                           
+                                                                 <div class="news-info">
+                                                                      
+                                                                      <h5>Medical Store</h5>
+                                                                      
+                                                                       </div>
+                                                                       </div>
+                                                                       </div>
+                              </div>
+                          </div>
+              
+                    
+                    
+               </div>
+          </div>
+     </section>
+
+
+     
+     
+     <!-- MAKE AN APPOINTMENT -->
+     
+     <section id="registration" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-6 col-sm-6">
+                         <img src="{% static 'images/appointment-image.jpg' %}" class="img-responsive" alt="">
+                    </div>
+
+                    <div class="col-md-6 col-sm-6">
+                         <!-- CONTACT FORM HERE -->
+                         <form id="appointment-form" name="registrationform" role="form" method="POST" >
+                         <script type="text/javascript" lang="javascript" src="{% static 'js/registration.js' %}"></script>
+                              {% csrf_token %}
+                              <!-- SECTION TITLE -->
+                              <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                   <h2>Registration</h2>
+                              </div>
+
+                              <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                   <div  class="collapse navbar-collapse">
+
+                                        <p>If you are a new user, please click the below link to register and get an appointment</p>
+                                       <b><a href="{% url 'doctorapp' %}"  class="form-control" id="cf-submit" name="submit" >Appoinment</a></b>
+                                       <p>If you are an already existing user, please click the below link and book an appoiintment by filling your Registration Id</p>
+                                       <b><a  href="{% url 'revisitdc' %}"  class="form-control" id="cf-submit" name="submit" >Reappoinment</a></b>
+                                       <p>If you are a new user, please click the below link and fill the details to get vaccinated</p>
+                                       <b><a  href="{% url 'vac' %}"  class="form-control" id="cf-submit" name="submit" >vaccination</a></b>
+                                       <p>If you are an already existing user, please click the below link to get vaccinated by filling your Registration Id</p>
+                                       <b><a type="submit" href="{% url 'vacc2' %}" class="form-control" id="cf-submit" name="submit" >revaccination</a></b>
+                                       
+                                    
+                                   </div>
+                        </form>
+                    </div>
+
+               </div>
+          </div>
+     </section>
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+     <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.765156062897!2d79.13083845031328!3d18.44896898738912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bccd9198e79a3b9%3A0xd6e5837c0a9bd1e1!2sRammohan%20Childrens%20Hospital%20-%20Teritary%20care%20for%20new%20born%20children!5e0!3m2!1sen!2sin!4v1676997812033!5m2!1sen!2sin" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>           
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <p><b style="color:rgb(6, 6, 6)">Please feel free to contact our health care institute</b></p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 9849861242 </p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">rammohan@gmail.com</a></p>
+                              </div>
+                         </div>
+                    </div>
+<!--
+                   <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Latest News</h4>
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="{% static 'images/news-image.jpg' %}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>Amazing Technology</h5></a>
+                                        <span>March 08, 2018</span>
+                                   </div>
+                              </div>
+
+                              <div class="latest-stories">
+                                   <div class="stories-image">
+                                        <a href="#"><img src="{% static 'images/news-image.jpg'%}" class="img-responsive" alt=""></a>
+                                   </div>
+                                   <div class="stories-info">
+                                        <a href="#"><h5>New Healing Process</h5></a>
+                                        <span>February 20, 2018</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+-->
+<div class="col-md-4 col-sm-4"> 
+     <div class="footer-thumb"> 
+          </div>
+          </div>
+
+
+
+
+
+
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                   <p>Monday<span>11:00 AM - 07:00 PM</span></p>
+                                   <p>tuesday <span>11:00 AM - 07:00 PM</span></p>
+                                   <p>wednesday <span>11:00 AM - 07:00 PM</span></p>
+                                   <p>thursday <span>11:00 AM - 07:00 PM</span></p>
+                                   <p>friday <span>11:00 AM - 07:00 PM</span></p>
+                                   <p>saturday <span>11:00 AM - 07:00 PM</span></p>
+                                   <p>Sunday <span>11:00 AM - 07:00 PM</span></p>
+                              </div> 
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-12 col-sm-12 border-top">
+                         <div class="col-md-4 col-sm-6">
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy;Rammohan Children's Hospital
+                                   
+                                 </p>
+                              </div>
+                         </div>
+                         <div class="col-md-6 col-sm-6">
+                              <div class="footer-link"> 
+                                   <a href="#">Laboratory Tests</a>
+                                   <a href="#">Departments</a>
+                                   <a href="#">Insurance Policy</a>
+                                   <a href="#">Careers</a>
+                              </div>
+                         </div>
+                         <div class="col-md-2 col-sm-2 text-align-center">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="static/js/jquery.js"></script>
+     <script src="static/js/bootstrap.min.js"></script>
+     <script src="static/js/jquery.sticky.js"></script>
+     <script src="static/js/jquery.stellar.min.js"></script>
+     <script src="static/js/wow.min.js"></script>
+     <script src="static/js/smoothscroll.js"></script>
+     <script src="static/js/owl.carousel.min.js"></script>
+     <script src="static/js/custom.js"></script>
+     
+     
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Job application Form</title>
+        <link rel="stylesheet" href="{% static 'css/job.css' %}">
+        <script type="text/javascript" lang="javascript" src="{% static 'js/job.js' %}"></script>
+    </head>
+       
+    <body>
+        <h1>Job Application Form</h1>
+        <div class="container">
+          <form id="f2"  name="jobform" method="POST" enctype="multipart/form-data" >
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-10">
+                    <label for="aname" >Applicant Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="aname" name="aname" placeholder="Enter your Applicant name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="appaadhar">Applicant Aadhar:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="appaadhar" name="appaadhar" placeholder="Enter your Applicant Aadhar" maxlength="12" minlength="12">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,.">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed" maxlength="10" minlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" name="gender" value="male"/>Male
+                    <input type="radio" id="female" name="gender" value="female"/>Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="dob" name="dob">
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <label for="age">Age</label>
+                    </div>
+                    <div class="col-90">
+                        <input type="number" id="age" name="age">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">City:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="city" name="city" maxlength="10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="pincode">Area PIN:</label>
+                </div>
+                <div class="col-90">
+                    <input type="number" id="pin" name="pin" maxlength="6">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="state">State:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="state" name="state">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <div class="col-100">
+                <label for="jobname">Job Name</label>
+               
+                     <select name="jobname" required>
+                       <option selected disabled>Select job name</option>
+                     {%for x in b%}
+                     <option>{{x.jname}}</option>
+                     {%endfor%}
+                     </select>
+                    
+             </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-10">
+                    <label for="file">File:</label>
+                </div>
+                
+                <!--                <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    -->
+
+                <div class="col-90">
+                    <input type="file" id="myfile" name="myfile">
+                </div>
+            </div>
+            
+            
+            <div class="row">
+                <input type="submit" value="Submit" onclick="return validateControls()">
+            </div>
+            <!--
+            <input type="text" id="txtfile" name="txtfile" style="display:none"/> 
+            <input type="text" id="tf" name="tf" style="display:none"/> 
+            -->
+          </form>
+
+
+<!--
+          {% if uploaded_file_url %}
+    <p>File uploaded at: <a href="{{ uploaded_file_url }}">{{ uploaded_file_url }}</a></p>
+  {% endif %}
+        <br/><br/><br/>
+  <p><a href="{% url 'load' %}">Load files</a></p>
+{% endblock %}
+-->
+    </body>
+</html>
