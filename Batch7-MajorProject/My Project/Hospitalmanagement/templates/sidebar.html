@@ -1,0 +1,185 @@
+<div class="deznav">
+    <div class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-networking"></i>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <ul aria-expanded="false">
+                    <li><a href="{% url 'admin_index' %}">Dashboard</a></li>
+                </ul>
+            </li>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                <i class="flaticon-381-television"></i>
+                <span class="nav-text">Vaccines</span>
+            </a>
+            <ul aria-expanded="false">
+                <!--<li><a href="./app-profile.html">Profile</a></li>-->
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Vaccine Management</a>
+                                    
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'managevac' %}">Manage Vaccines</a></li>
+                       
+                    </ul>
+                </li>
+
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Vaccine Reports</a>
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'vacreportdis' %}">Generate Vaccine Report</a></li>
+                       
+                    </ul>               
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'uploadvacreport' %}">Upload Vaccine Report</a></li>
+                       
+                    </ul>
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'sendvacreport' %}">send Vaccine Report</a></li>
+                       
+                    </ul>
+
+
+                </li>
+                <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Vaccine Bills</a>
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'patientvacdis' %}">Generate Vaccine Bills</a></li>
+                       
+                    </ul>  
+                    <ul aria-expanded="false">
+                        
+                        <li><a href="{% url 'uploadvacbill' %}">Upload Vaccine Bill</a></li>
+                       
+                    </ul>  
+                    
+                    <ul aria-expanded="false">
+                                    
+                        <li><a href="{% url 'sendvacbill' %}">send Vaccination Bills</a></li>
+                       
+                    </ul>
+                </li>
+            </ul>
+            <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                    <i class="flaticon-381-television"></i>
+                    <span class="nav-text">Jobs</span>
+                </a>
+                
+                    <!--<li><a href="./app-profile.html">Profile</a></li>-->
+                    
+                        <ul aria-expanded="false">
+                            
+                            <li><a href="{% url 'managejob' %}">Manage Jobs</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-381-television"></i>
+                        <span class="nav-text">In-Patient</span>
+                    </a>
+                                
+                            <ul aria-expanded="false">
+                                
+                                <li><a href="{% url 'managestatus' %}">Edit Patient Status</a></li>
+                               
+                            </ul>
+                        </li>
+                   
+
+                    <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                        <i class="flaticon-381-television"></i>
+                        <span class="nav-text">Patient Reports</span>
+                    </a>
+                    
+                        <!--<li><a href="./app-profile.html">Profile</a></li>-->
+                        
+                            <ul aria-expanded="false">
+                                
+                                <li><a href="{% url 'uploadreportfile' %}">Upload Report(File)</a></li>
+                               
+                            </ul>
+
+                            <ul aria-expanded="false">
+                                
+                                <li><a href="{% url 'sendreports' %}">send Reports</a></li>
+                               
+                            </ul>
+                        </li>
+
+                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                            <i class="flaticon-381-television"></i>
+                            <span class="nav-text">Patient Bills</span>
+                        </a>
+                        
+                            <!--<li><a href="./app-profile.html">Profile</a></li>-->
+                            <ul aria-expanded="false">
+                                    
+                                <li><a href="{% url 'patientdis' %}">Generate Bills</a></li>
+                               
+                            </ul>
+                            
+                                <ul aria-expanded="false">
+                                    
+                                    <li><a href="{% url 'uploadfile' %}">Upload Bill(File)</a></li>
+                                   
+                                </ul>
+
+                                <ul aria-expanded="false">
+                                    
+                                    <li><a href="{% url 'sendbills' %}">send Bills</a></li>
+                                   
+                                </ul>
+                            </li>
+
+                                
+                                    
+
+                                    
+                                    
+
+                                <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+                                    <i class="flaticon-381-television"></i>
+                                    <span class="nav-text">Fetch Details</span>
+                                </a>
+                                <ul aria-expanded="false">
+                                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Inpatient Details</a>
+                                        <ul aria-expanded="false">
+                                            <li><a href="{% url 'inpatient' %}">In-Patient Details</a></li>
+                                            <li><a href="{% url 'datewisein' %}">Date-wise Patients</a></li>
+                                            
+                                        </ul>
+                                    </li>
+
+                                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">outpatient Details</a>
+                                        <ul aria-expanded="false">
+                                            <li><a href="{% url 'outpatient' %}">Out-Patient Details</a></li>
+                                            <li><a href="{% url 'datewiseout' %}">Date-wise Patients</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                   
+                                    <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Appointment Details</a>
+                                        <ul aria-expanded="false">
+                                            <li><a href="{% url 'date1' %}">Given Date</a></li>
+                                            <li><a href="{% url 'todate' %}">From to date</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                        <li><a href="{% url 'ridwise' %}">Single-Patient Details</a></li>
+                                    
+                                    
+
+
+
+        </ul>
+
+        <div class="copyright">
+            <p><strong>Rammohan children Hospital Admin Dashboard</strong> © 2023 All Rights Reserved</p>
+            
+        </div>
+    </div>
+</div>

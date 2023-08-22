@@ -1,0 +1,162 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Doctor Consultation</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="author" content="Tooplate">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}" type="text/css">
+        <script type="text/javascript" lang="javascript" src="{% static 'js/app.js' %}"></script>
+   
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+   
+   
+    </head>
+<body>
+    <section id="appointment" data-stellar-background-ratio="3">
+    <div class="container">
+         <div class="row">
+
+              <div class="col-md-6 col-sm-6">
+                   <img src="{% static 'images/appointment-image.jpg' %}" class="img-responsive" alt="">
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                   <!-- CONTACT FORM HERE -->
+                   <form id="doctorapp" role="form" method="POST" name="appform">
+                        {% csrf_token %}
+                        <!-- SECTION TITLE -->
+                        
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                             <h2>  Doctor Consultation </h2>
+                             
+                        </div>
+
+                        <div class="wow fadeInUp" data-wow-delay="0.8s">
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="cname">Child Name</label>
+                                  <input type="text" class="form-control" id="cname" name="cname" placeholder="Child Name" required>
+                             </div>
+                             
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="dob">Date of Birth</label>
+                                  <input type="date" name="dob" value="" class="form-control" required>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="age">Age</label>
+                                  <input type="number" class="form-control" id="age" name="age" max="17" min="0" placeholder="Your Age" required>
+                             </div>
+
+                             
+                                  
+                                  <div class="col-md-6 col-sm-6">
+                                       <label for="gender">Gender</label>
+                                       <select class="form-control" id="gender" name="gender" required>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            
+                                       </select>
+                                  
+
+                             </div>
+
+                             
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="cblood">Blood Group</label>
+                                  <select class="form-control" id="cblood" name="cblood" required>
+                                       <option>O+</option>
+                                       <option>O-</option>
+                                       <option>A+</option>
+                                       <option>A-</option>
+                                       <option>B+</option>
+                                       <option>B-</option>
+                                       <option>AB+</option>
+                                       <option>AB-</option>
+                                       
+                                  </select>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="fname">Father Name</label>
+                                  <input type="text" class="form-control" id="fname" name="fname" placeholder="Father Name" required>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="faadhar">Father Aadhar </label>
+                                  <input type="text" class="form-control" id="faadhar" name="faadhar" placeholder="Father Aadhar" maxlength="12" minlength="12" required>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="mname">Mother Name</label>
+                                  <input type="text" class="form-control" id="mname" name="mname" placeholder="Mother Name" required>
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="maadhar">Mother Aadhar </label>
+                                  <input type="text" class="form-control" id="maadhar" name="maadhar" placeholder="Mother Aadhar" maxlength="12" minlength="12" required> 
+                             </div>
+
+                             <div class="col-md-6 col-sm-6">
+                                  <label for="telephone">Phone Number</label>
+                                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone Number" maxlength="10" minlength="10" required>
+                                 
+                             </div>
+<!--                            
+                             <div class="col-md-12 col-sm-12">
+                                  <label for="select">Book an appointment for</label>
+                                  <select class="form-control" id="select" name="select" >
+                                       <option>Doctor Consultation</option>
+                                       <option>vaccination</option>
+                                       
+                                  </select>
+                             </div>
+-->
+
+                             <div class="col-md-12 col-sm-12">
+                                  <label for="email">Email</label>
+                                  <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+                             </div>
+
+                            
+                             <div class="col-md-12 col-sm-12">
+                             <label for="Message">Address</label>
+                             <textarea class="form-control" rows="5" id="message" name="message" placeholder="Address" required></textarea>
+                             </div>
+                             
+                             
+                               <button type="submit" class="form-control" id="cf-submit" name="submit" onclick="validateapp()">Submit Button</button>
+                            
+                                
+                         
+                        </div>
+                  </form>
+              </div>
+
+         </div>
+    </div>
+</section>
+<script src="{% static 'js/jquery.js' %}"></script>
+     <script src="{% static 'js/bootstrap.min.js' %}"></script>
+     <script src="{% static 'js/jquery.sticky.js' %}"></script>
+     <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+     <script src="{% static 'js/wow.min.js' %}"></script>
+     <script src="{% static 'js/smoothscroll.js' %}"></script>
+     <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+     <script src="{% static 'js/custom.js' %}"></script>
+     
+     
+
+</body>
+</html>

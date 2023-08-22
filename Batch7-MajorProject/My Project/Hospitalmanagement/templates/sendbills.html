@@ -1,0 +1,224 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rammohan-Hospital Admin Dashboard</title>
+	
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+	<!-- Datatable -->
+    <link href="{% static 'vendor/datatables/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+
+     
+     
+
+
+	</head>
+	<body>
+		<div id="main-wrapper">
+		<!--header starts-->
+		{% include "header.html" %}
+		<!--Header ends-->
+   
+		   
+	   
+		   <!--Sidebar start ****-->
+		   {% include "sidebar.html" %}
+		   <!--***** Sidebar end **-->
+		   
+		
+		 <form id="f1" method="POST">
+			<div class="content-body">
+				<div class="container-fluid">
+					<div class="page-titles">
+						<h4>Hospital Bills</h4>
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="javascript:void(0)">Sending Bills</a></li>
+								</ol>
+					</div>
+					<!-- row -->
+					{% csrf_token %}
+		
+						
+					<div class="row">
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Send Bills</h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="example" class="display min-w850">
+										<thead>
+											<tr>
+												
+												<th>Registration Id</th>
+                                                <th>Patient Name</th>
+                                                <th>Appointment Id</th>
+                                                <th>Mail</th>
+                                                <th>Bill</th>
+                                                <th>Send Bill</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for x in bills %}
+											<tr>
+												<td>{{x.rid}}</td>
+												<td>{{x.cname}}</td>
+												<td>{{x.aid}}</td>
+												<td>{{x.mail}}</td>
+												<td>{{x.billfile}}</td>
+												<td><u><a href="{% url 'email-compose' x.sid %}">send bill</a></u></td>
+												
+												{% endfor %}
+											</tr>
+											
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+		</div>
+		</div>
+			</section>
+		</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+		<form id="f1" method="POST">
+			<section class="ftco-section">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-md-6 text-center mb-5">
+							<h3 class="heading-section" style="font-size:30px">IN-PATIENT BILLINGS </h3>
+							
+						</div>
+					</div>
+					{% csrf_token %}
+					<div class="row">
+						<div class="col-md-12">
+							<div class="table-wrap">
+								<table class="table table-responsive-xl">
+								  <thead>
+									<tr>
+										<th>&nbsp;</th>
+							
+										<th><b style="font-size:25px">Registration Id</b></th>
+									  <th><b style="font-size:25px">Patient Name</b></th>
+									  <th><b style="font-size:25px">Appointment Id</b></th>
+									  <th></th>
+									  <th><b style="font-size:25px">Mail</b></th>
+									  <th></th>
+									  <th><b style="font-size:25px">Bill</b></th>
+									  <th><b style="font-size:25px">Send Bill</b></th>
+									  
+									  <th>&nbsp;</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									{% for x in bills %}
+									<tr class="alert" role="alert">
+										
+									  <td class="d-flex align-items-center">
+										<div class="pl-3 email">
+										<td>
+											  <span><b style="font-size:25px; color:red">{{x.rid}} </b></span>
+											</td>
+										  </div>
+									  </td>
+									  
+									  <td class="d-flex align-items-center">
+										<div class="pl-3 email">
+										
+											  <span><b style="font-size:25px; color:red">{{x.cname}} </b></span>
+											  
+										  </div>
+									  </td>
+									  <td class="d-flex align-items-center">
+										<div class="pl-3 email">
+										<td>
+											  <span><b style="font-size:25px; color:red">{{x.aid}} </b></span>
+											</td>  
+										  </div>
+									  </td>
+									  
+                                      <td class="d-flex align-items-center">
+										<div class="pl-3 email">
+										<td>
+											  <span><b style="font-size:25px; color:red">{{x.mail}} </b></span>
+											</td>  
+										  </div>
+									  </td>
+					 
+									  <td class="d-flex align-items-center">
+										<div class="pl-3 email">
+										<td>
+											  <span><b style="font-size:25px; color:red">{{x.billfile}} </b></span>
+											</td>  
+										  </div>
+									  </td>
+									  <td>
+										<u>
+										<a style="font-size:25px" href="{% url 'email-compose' x.sid %}">Send bill</a>
+									</u>
+									</td>
+									
+									</tr>
+									{% endfor %}
+									  
+								  </tbody>
+								</table>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</form>
+
+		-->
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">Batch 7</a> 2023</p>
+			</div>
+		</div>
+	</div>
+		<script src="{% static 'vendor/global/global.min.js' %}"></script>
+			<script src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+			<script src="{% static 'js/custom.min.js' %}"></script>
+			<script src="{% static 'js/deznav-init.js' %}"></script>
+			
+
+		
+<!-- Datatable -->
+<script src="{% static 'vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'js/plugins-init/datatables.init.js' %}"></script>
+
+
+	</body>
+</html>

@@ -1,0 +1,138 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rammohan-Hospital Admin Dashboard</title>
+	<!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+	<link href="{% static 'vendor/jqvmap/css/jqvmap.min.css' %}" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'vendor/chartist/css/chartist.min.css' %}">
+    <link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+	<link href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+    
+
+</head>
+<body>
+ <!--*******************
+        Preloader start
+    ********************-->
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper"><!--header starts-->
+		{% include "header.html" %}
+		<!--Header ends-->
+   
+		   
+	   
+		   <!--Sidebar start ****-->
+		   {% include "sidebar.html" %}
+		   <!--***** Sidebar end **-->
+
+
+             <div class="content-body">
+               <div class="container-fluid">
+                   <div class="page-titles">
+                            <h4>DATE-WISE PATIENT DATA</h4>
+                            <ol class="breadcrumb">
+                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Date-wise Patient Data </a></li>
+                                                   </ol>
+                   </div>
+              
+          
+           <!-- row -->
+           <div class="row">
+               <div class="col-xl-6 col-lg-6">
+                   <div class="card">
+                       <div class="card-header">
+                           <h4 class="card-title">Date-Wise Patient Display  </h4>
+                       </div>
+                       <div class="card-body">
+                           <div class="basic-form">
+                               <form id="date-form" name="dateform" role="form" method="POST" action="datefetch">
+                                   <script type="text/javascript" lang="javascript" src="{% static 'js/registration.js' %}"></script>
+                         
+                                   {% csrf_token %}
+                                   <div class="form-group">
+                                        <label><b style="color:black">Date</b></label>
+                                        <input type="date" style="color:black" class="form-control" id="d" name="d" placeholder="Enter  date ">
+                                    </div>
+                                  
+                                   <div class="col-12">
+                                        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                                    </div></form>
+                           </div>
+                       </div>
+                   </div>
+               </div>  
+               </div>
+          </div>
+          
+          </div>
+          
+
+
+
+
+<!--
+<id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+    <section id="appointment" data-stellar-background-ratio="3">
+        <div class="container">
+             <div class="row">
+
+                  <div class="col-md-6 col-sm-6">
+                       <img src="{% static 'images/appointment-image.jpg' %}" class="img-responsive" alt="">
+                  </div>
+
+                  <div class="col-md-6 col-sm-6">
+                      
+                       <form id="date-form" name="dateform" role="form" method="POST" action="datefetch">
+                       <script type="text/javascript" lang="javascript" src="{% static 'js/registration.js' %}"></script>
+                            {% csrf_token %}
+                           
+                            <div class="section-title wow fadeInUp" data-wow-delay="0.4s">
+                                 <h2> Date </h2>
+                            </div>
+
+                            <div class="wow fadeInUp" data-wow-delay="0.8s">
+                                 <div class="col-md-6 col-sm-6">
+                                      <label for="date">DATE </label>
+                                      <input type="date" class="form-control" id="d" name="d" placeholder="Enter  date ">
+                                 </div>
+                                </div>
+                                <button type="submit" class="form-control" id="cf-submit" name="submit" >Submit Button</button>
+                            
+                           </div>
+                     </form>
+                 </div>
+
+            </div>
+       </div>
+     </section>
+-->
+<div class="footer">
+     <div class="copyright">
+          <p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">DexignZone</a> 2020</p>
+     </div>
+</div>
+</div>
+<script src="{% static 'vendor/global/global.min.js' %}"></script>
+     <script src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+     
+    <script src="{% static 'js/custom.min.js' %}"></script>
+     <script src="{% static 'js/deznav-init.js' %}"></script>
+    
+
+     </body>
+</html>

@@ -1,0 +1,142 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rammohan-Hospital Admin Dashboard</title>
+	
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+	<!-- Datatable -->
+    <link href="{% static 'vendor/datatables/css/jquery.dataTables.min.css' %}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'vendor/bootstrap-select/dist/css/bootstrap-select.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+
+<!--
+
+	<title>IN-PATIENT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'css/style1.css' %}">
+
+	
+	<link rel="stylesheet" href="{% static 'css/tooplate-style.css' %}">
+	
+-->
+     
+     
+
+
+	</head>
+	<body>
+		<div id="main-wrapper">
+		<!--header starts-->
+		{% include "header.html" %}
+		<!--Header ends-->
+   
+		   
+	   
+		   <!--Sidebar start ****-->
+		   {% include "sidebar.html" %}
+		   <!--***** Sidebar end **-->
+		   
+		
+		
+		   
+
+
+					<form id="f1" method="POST">
+						<div class="content-body">
+							<div class="container-fluid">
+								<div class="page-titles">
+									<h4>PATIENT BILLINGS</h4>
+									<ol class="breadcrumb">
+										<li class="breadcrumb-item"><a href="javascript:void(0)">Generating Bills</a></li>
+											</ol>
+								</div>
+								<!-- row -->
+								{% csrf_token %}
+					
+					<div class="row">
+					<div class="col-12">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="card-title">Generating Bills</h4>
+							</div>
+							<div class="card-body">
+								<div class="table-responsive">
+									<table id="example2" class="display">
+										<thead>
+											<tr>
+												<th>Registration Id</th>
+												<th>Patient Name</th>
+												<th>Appointment Id</th>
+												<th>Generate Bill</th>
+											</tr>
+										</thead>
+										<tbody>
+											{% for x in patient %}
+											<tr>
+												<td>{{x.rid}}</td>
+												<td>{{x.cname}}</td>
+												<td>{{x.aid}}</td>
+												<td><u><a href="{% url 'generateinpatientbills' x.id %}">generate bill</a></u></td>
+												
+												
+											</tr>
+											
+											{% endfor %}
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+		</div>
+		
+			</section>
+		</form>
+
+
+
+
+
+
+
+
+
+
+		<div class="footer">
+			<div class="copyright">
+				<p>Copyright © Designed &amp; Developed by <a href="http://dexignzone.com/" target="_blank">Batch 7</a> 2023</p>
+			</div>
+		</div>
+		</div>
+		<script src="{% static 'vendor/global/global.min.js' %}"></script>
+			<script src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.min.js' %}"></script>
+			<script src="{% static 'js/custom.min.js' %}"></script>
+			<script src="{% static 'js/deznav-init.js' %}"></script>
+			
+
+		
+<!-- Datatable -->
+<script src="{% static 'vendor/datatables/js/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'js/plugins-init/datatables.init.js' %}"></script>
+
+
+	</body>
+</html>
+
+
+	
